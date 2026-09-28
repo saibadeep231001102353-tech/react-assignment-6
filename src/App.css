@@ -1,0 +1,47 @@
+/* App Layout Canvas */
+.taskflow-app-canvas {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  background-color: var(--bg-canvas);
+  color: var(--text-primary);
+  overflow-x: hidden;
+  transition: background-color var(--transition-normal);
+}
+
+/* Ambient Spheres */
+.ambient-sphere {
+  position: fixed;
+  border-radius: 50%;
+  filter: blur(140px);
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.16;
+}
+
+.sphere-top-left {
+  top: -120px;
+  left: -120px;
+  width: 520px;
+  height: 520px;
+  background: radial-gradient(circle, var(--sky-500) 0%, transparent 70%);
+}
+
+.sphere-top-right {
+  top: 100px;
+  right: -140px;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, var(--indigo-500) 0%, transparent 70%);
+  opacity: 0.12;
+}
+
+/* Main Content Routing Flow */
+.main-content-flow {
+  flex: 1;
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+}
